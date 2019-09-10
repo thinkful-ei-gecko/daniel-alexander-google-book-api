@@ -1,0 +1,12 @@
+.search-filters {
+    background-color: gainsboro;
+    padding: .5em;
+}
+
+.search-filters select:first-of-type {
+    margin-right: 1em;
+}
+
+.search-filters label {
+    margin-right: .5em;
+}

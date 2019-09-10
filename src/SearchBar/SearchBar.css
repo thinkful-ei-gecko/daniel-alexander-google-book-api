@@ -1,0 +1,8 @@
+.section__searchbar {
+    padding: .5em;
+    background-color: gray;
+}
+
+.section__searchbar label {
+    margin-right: .5em;
+}

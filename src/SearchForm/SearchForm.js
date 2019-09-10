@@ -9,7 +9,7 @@ class SearchForm extends Component {
       <section className="section__search">
         <form onSubmit= {(event) => {
           event.preventDefault();
-          this.props.changeHandler(event.target.bookSearch.value)
+          this.props.getBooks();
         }}>
           <SearchBar {...this.props} />
           <SearchFilters {...this.props} />

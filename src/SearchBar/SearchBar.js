@@ -12,6 +12,7 @@ class SearchBar extends Component {
           name="bookSearch"
           type="text"
           id="book-search"
+          onChange={(e) => this.props.changeHandler(e.currentTarget.value)}
           />
           <button type="submit">Search</button>
       </section>

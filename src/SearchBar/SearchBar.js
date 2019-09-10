@@ -9,6 +9,7 @@ class SearchBar extends Component {
           htmlFor="book-search"
           >Search:</label>
         <input
+          name="bookSearch"
           type="text"
           id="book-search"
           />

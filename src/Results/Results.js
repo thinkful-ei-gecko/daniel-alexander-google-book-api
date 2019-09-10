@@ -5,7 +5,7 @@ import './Results.css';
 class Results extends Component {
   render(){
     return(
-      <section class="search__results">
+      <section className="search__results">
         <ul className="book-list">
           <Book />
           <Book />

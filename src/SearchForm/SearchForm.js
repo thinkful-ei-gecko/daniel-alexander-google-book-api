@@ -5,12 +5,14 @@ import './SearchForm.css';
 
 class SearchForm extends Component {
   render(){
-    console.log(this.props.searchUpdate);
     return(
       <section className="section__search">
-        <form>
-          <SearchBar />
-          <SearchFilters />
+        <form onSubmit= {(event) => {
+          event.preventDefault();
+          this.props.changeHandler(event.target.bookSearch.value)
+        }}>
+          <SearchBar {...this.props} />
+          <SearchFilters {...this.props} />
         </form>
       </section>
     )

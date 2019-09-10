@@ -4,18 +4,19 @@ import './Results.css';
 
 class Results extends Component {
   render(){
-    console.log(this.props.response);
-    console.log(this.props.expanded);
-    const books = this.props.response.map(book =>
+    const books = this.props.response.map((book, idx) =>
       <Book
+        handleExpanded = {this.props.handleExpanded}
+        key={idx}
+        id ={idx}
         title={book.volumeInfo.title}
         thumbnail={book.volumeInfo.imageLinks.thumbnail}
         authors={book.volumeInfo.authors}
-        price={book.volumeInfo}
+        price = {book.saleInfo.listPrice.amount}
         desc={book.volumeInfo.description}
+        expanded={this.props.expanded}
         />
-      // <li>{book.volumeInfo.title}</li>
-    )
+      )
     return(
       <section className="search__results">
         <ul className="book-list">

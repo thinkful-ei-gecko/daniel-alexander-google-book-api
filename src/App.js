@@ -34,6 +34,11 @@ class App extends Component {
       loading: false
     }
   }
+
+    setExpanded(id) {
+      console.log(id)
+      this.setState({expanded: id})
+    }
     
      searchUpdate(newSearchTerm) {
       this.setState({searchTerm: newSearchTerm})
@@ -103,6 +108,7 @@ class App extends Component {
         getBooks = {this.getBooks}
         />
         <Results
+          handleExpanded = {expanded => this.setExpanded(expanded)}
           response = {this.state.response}
           expanded = {this.state.expanded}
         />

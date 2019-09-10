@@ -1,4 +1,4 @@
-{
+const exampleObject = {
       "kind": "books#volume",
       "id": "AokcsKn-1iIC",
       "etag": "MXeBnysKWZQ",

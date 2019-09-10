@@ -27,9 +27,9 @@ class App extends Component {
       searchTerm: '',
       printTypeFilter: 'all',
       bookTypeFilter: 'ebooks',
-      response: null,
+      response: [],
       displayResult: null,
-      expanded: false,
+      expanded: 1,
       error: null,
       loading: false
     }
@@ -84,18 +84,15 @@ class App extends Component {
             }
             throw new Error(res.StatusText)
           })
-          .then(resJson => this.setState({response: resJson}))
+          .then(resJson => this.setState({response: resJson.items}))
           .catch(err => {
             this.setState({error: `${err.message}`})
           })
           
       }
-
-
-
  
   render(){
-
+    console.log(this.state.response);
     return (
       <div className="App">
         <Header />
@@ -105,7 +102,10 @@ class App extends Component {
         printFilter = {printChoice => this.printTypeUpdate(printChoice)}
         getBooks = {this.getBooks}
         />
-        <Results />
+        <Results
+          response = {this.state.response}
+          expanded = {this.state.expanded}
+        />
       </div>
     );
   }

@@ -13,7 +13,7 @@ class Book extends Component {
       <img src={this.props.thumbnail} alt="BookPicture.jpg" />
       <h2>{this.props.title}</h2>
       <p>{this.props.authors}</p>
-      <p>{this.props.price}</p>
+      {/* <p>{this.props.price}</p> */}
     </li>
      
     )

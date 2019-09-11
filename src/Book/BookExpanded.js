@@ -7,7 +7,7 @@ class BookExpanded extends Component {
       <li
         key={this.props.key}
         id ={this.props.id}
-        onClick = {(e) => this.props.handleExpanded(e.currentTarget.id)}
+        onClick = {() => this.props.handleExpanded(null)}
         className="book"
         >
         <img src={this.props.thumbnail} alt="BookPicture.jpg" />

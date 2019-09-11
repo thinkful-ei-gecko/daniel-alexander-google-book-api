@@ -15,7 +15,7 @@ class App extends Component {
       bookTypeFilter: 'ebooks',
       response: [],
       displayResult: null,
-      expanded: 1,
+      expanded: null,
       error: null,
       loading: false
     }

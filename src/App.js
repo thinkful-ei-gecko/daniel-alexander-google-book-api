@@ -5,20 +5,6 @@ import Results from './Results/Results'
 
 import './App.css';
 
-// const {title, author, description, imagelinks} = this.state.response.items.volumeInfo;
-//           console.log(title)
-// const itemsVolumeInfo = {this.state.response.volumeInfo}
-// const itemsSaleInfo
-
-// this.state.response.items.volumeInfo.title
-
-// this.state.response.items.volumeInfo.author
-
-// this.state.response.items.volumeInfo.description
-
-// this.state.response.items.volumeInfo.imageLinks.thumbnail
-
-// this.state.response.items.saleInfo.listPrice.amount
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +22,6 @@ class App extends Component {
   }
 
     setExpanded(id) {
-      console.log(id)
       this.setState({expanded: id})
     }
     
@@ -53,17 +38,16 @@ class App extends Component {
        this.setState({printTypeFilter: filterChoice})
      }
 
-
-     componentDidMount() {}
-
       formatParams = (params) => {
         const queryItems = Object.keys(params)
         .map(key =>`${key}=${params[key]}`);
         return queryItems.join('&');
        
       }
+
+    componentDidMount() {
       
-      getBooks = () => {
+      this.getBooks = () => {
         
         const baseURL = 'https://www.googleapis.com/books/v1/volumes';
 
@@ -95,9 +79,9 @@ class App extends Component {
           })
           
       }
+    }
  
   render(){
-    console.log(this.state.response);
     return (
       <div className="App">
         <Header />

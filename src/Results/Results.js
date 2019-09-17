@@ -9,7 +9,6 @@ class Results extends Component {
     return (
     <BookExpanded 
       handleExpanded = {this.props.handleExpanded}
-      key={idx}
       id ={idx}
       title={book.volumeInfo.title}
       thumbnail={book.volumeInfo.imageLinks.thumbnail}
@@ -23,10 +22,9 @@ class Results extends Component {
     return (
       <Book
         handleExpanded = {this.props.handleExpanded}
-        key={idx}
         id ={idx}
         title={book.volumeInfo.title}
-        thumbnail={book.volumeInfo.imageLinks.thumbnail}
+        thumbnail={book.volumeInfo.imageLinks.smallThumbnail}
         authors={book.volumeInfo.authors}
         price = {book.saleInfo.listPrice.amount}
         desc={book.volumeInfo.description}
